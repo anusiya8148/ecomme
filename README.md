@@ -54,7 +54,7 @@ Note: ecommerce.db is auto-generated when the application runs and should NOT be
 
 ### 1️⃣ Clone the Repository
 
-git clone https://github.com/your-username/ecommerce-project.git  
+#https://github.com/anusiya8148/ecomme.git
 cd ecommerce-project
 
 ---
