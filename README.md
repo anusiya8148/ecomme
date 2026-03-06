@@ -1,0 +1,170 @@
+# 🛒 Flask E-Commerce Web Application
+
+A full-stack E-Commerce web application built using Flask, SQLite, HTML, CSS, and JavaScript.
+
+This project demonstrates user authentication, product management, shopping cart functionality, order processing, and admin role-based access control.
+
+---
+
+## 🚀 Features
+
+### 👤 User Features
+- User Registration & Login
+- Secure Password Hashing (SHA-256)
+- Session-Based Authentication
+- Browse Product Catalog
+- Add Products to Cart
+- Place Orders
+- View Order History
+- Logout
+
+### 🛠️ Admin Features
+- Add New Products
+- Delete Products
+- View All Orders
+- Update Order Status (Pending → Shipped)
+- Role-Based Access Control
+
+---
+
+## 🏗️ Tech Stack
+
+- Backend: Flask (Python)
+- Database: SQLite
+- Frontend: HTML, CSS, JavaScript
+- Authentication: Flask Sessions
+- API Style: RESTful JSON APIs
+
+---
+
+## 📂 Project Structure
+
+ecommerce-project/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+└── .gitignore
+
+Note: ecommerce.db is auto-generated when the application runs and should NOT be uploaded to GitHub.
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+git clone https://github.com/your-username/ecommerce-project.git  
+cd ecommerce-project
+
+---
+
+### 2️⃣ Create Virtual Environment (Recommended)
+
+python -m venv venv
+
+Activate environment:
+
+Windows:
+venv\Scripts\activate
+
+Mac/Linux:
+source venv/bin/activate
+
+---
+
+### 3️⃣ Install Dependencies
+
+pip install -r requirements.txt
+
+If you don’t have requirements.txt:
+
+pip install flask
+
+---
+
+### 4️⃣ Run the Application
+
+python app.py
+
+Server will start at:
+http://127.0.0.1:5000/
+
+---
+
+## 🗄️ Database Schema
+
+### Users Table
+- id (Primary Key)
+- email (Unique)
+- password (Hashed)
+- role (user/admin)
+
+### Products Table
+- id
+- name
+- price
+- image
+- description
+
+### Orders Table
+- id
+- user_id (Foreign Key)
+- items
+- total
+- image_desc
+- status (default: pending)
+- created_at (timestamp)
+
+---
+
+## 📡 API Endpoints
+
+### Authentication
+- POST /api/register
+- POST /api/login
+- GET /api/logout
+
+### Products
+- GET /api/products
+- POST /api/products (Admin only)
+- DELETE /api/products/<id> (Admin only)
+
+### Orders
+- POST /api/orders
+- GET /api/orders
+- PUT /api/orders/<id> (Admin only)
+
+---
+
+## 🔐 Security Features
+
+- Passwords hashed using SHA-256
+- Session-based authentication
+- Admin routes protected
+- User can only view their own orders
+- Role-based access control
+
+---
+
+## 📈 Future Improvements
+
+- JWT Authentication
+- Stripe Payment Integration
+- Product Quantity System
+- Order Tracking
+- Admin Dashboard with Analytics
+- Docker Support
+- Cloud Deployment (Render / Railway / AWS)
+
+---
+
+## 🎯 Resume Description
+
+Developed a full-stack E-Commerce web application using Flask and SQLite featuring session-based authentication, RESTful APIs, product CRUD operations, order management, and admin role-based access control.
+
+---
+
+##Author
+
+Anusiya R
